@@ -8,7 +8,7 @@ aplicação completa entregue na Aula 20. O enunciado completo do case está em
 
 ## Identificação
 
-- Nome completo: José Romualdo da Costa
-- RA: 1234567890
-- Turma: quinta
+- Nome completo: Gustavo Nunes Da Silva
+- RA: 925109999
+- Turma: 5 mm
 - O que espero aprender: publicar minha primeira aplicação web na internet.
