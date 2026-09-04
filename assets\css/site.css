@@ -1,0 +1,125 @@
+:root {
+  --vida-primaria: #0B6E75;      /* verde-azulado do logotipo */
+  --vida-secundaria: #2E9E7E;    /* confirmação de agendamento */
+  --vida-destaque: #E4572E;      /* chamada para ação */
+  --vida-fundo: #F4F7F6;
+  --vida-texto: #1F2A30;
+  --vida-borda: #D6E2E0;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Página */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--vida-texto);
+  background-color: var(--vida-fundo);
+}
+
+/* Links */
+a {
+  color: var(--vida-primaria);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--vida-destaque);
+}
+
+/* Botão padrão */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--vida-primaria);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--vida-secundaria);
+}
+:root {
+    --vida-primaria: #0B6E75;      /* Verde-azulado do logotipo */
+    --vida-secundaria: #2E9E7E;    /* Confirmação de agendamento */
+    --vida-destaque: #E4572E;      /* Chamada para ação */
+    --vida-fundo: #F4F7F6;
+    --vida-texto: #1F2A30;
+    --vida-borda: #D6E2E0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--vida-texto);
+    background-color: var(--vida-fundo);
+}
+header {
+    background-color: var(--vida-primaria);
+    color: #ffffff;
+    padding: 24px 32px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    display: flex; /* itens do menu lado a lado */
+    gap: 24px;
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--vida-destaque);
+}
+.lista-especialidades {
+    /* Contêiner principal */
+    display: flex;
+    flex-wrap: wrap; /* Quebra linha em telas menores */
+    gap: 20px; /* Espaço entre os cards */
+    justify-content: center; /* Centraliza os cards */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-especialidades li {
+    /* Card individual */
+    width: 260px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-left: 4px solid var(--vida-secundaria);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.lista-especialidades li:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
