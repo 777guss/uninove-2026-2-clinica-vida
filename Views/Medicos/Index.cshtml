@@ -1,0 +1,68 @@
+@model IEnumerable<ClinicaVida.Web.Models.Medico>
+@{
+    ViewData["Title"] = "Médicos";
+    var especialidades = (List<Especialidade>)ViewBag.Especialidades;
+    var especialidadeSelecionada = (int?)ViewBag.EspecialidadeSelecionada;
+}
+
+<section class="cabecalho-pagina">
+    <div>
+        <p class="eyebrow">Corpo clínico</p>
+        <h1>Médicos</h1>
+        <p>Lista em ordem alfabética, com filtro por especialidade.</p>
+    </div>
+</section>
+
+<form method="get" asp-controller="Medicos" asp-action="Index" class="filtro">
+    <label for="especialidade">Especialidade</label>
+    <select id="especialidade" name="especialidade">
+        <option value="">Todas as especialidades</option>
+        @foreach (var especialidade in especialidades)
+        {
+            if (especialidadeSelecionada == especialidade.Id)
+            {
+                <option value="@especialidade.Id" selected>@especialidade.Nome</option>
+            }
+            else
+            {
+                <option value="@especialidade.Id">@especialidade.Nome</option>
+            }
+        }
+    </select>
+    <button class="botao" type="submit">Filtrar</button>
+    @if (especialidadeSelecionada.HasValue)
+    {
+        <a class="botao secundario" asp-controller="Medicos" asp-action="Index">Limpar</a>
+    }
+</form>
+
+@if (!Model.Any())
+{
+    <div class="vazio">Nenhum médico encontrado para a especialidade selecionada.</div>
+}
+else
+{
+    <div class="tabela-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CRM</th>
+                    <th>Especialidade</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var medico in Model)
+            {
+                <tr>
+                    <td>@medico.Nome</td>
+                    <td>@medico.Crm</td>
+                    <td>@medico.Especialidade.Nome</td>
+                    <td><a asp-action="Details" asp-route-id="@medico.Id">Detalhes</a></td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}

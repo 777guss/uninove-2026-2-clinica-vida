@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clínica Vida+</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="topo">
+        <div class="container topo-inner">
+            <a class="marca" asp-controller="Especialidades" asp-action="Index">Clínica Vida+</a>
+            <nav>
+                <a asp-controller="Especialidades" asp-action="Index">Especialidades</a>
+                <a asp-controller="Medicos" asp-action="Index">Médicos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container conteudo">
+        @RenderBody()
+    </main>
+
+    <footer class="rodape">
+        <div class="container">Clínica Vida+ &mdash; Laboratório de C# e LINQ</div>
+    </footer>
+</body>
+</html>
