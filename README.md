@@ -1,4 +1,4 @@
-# Clínica Vida+ — Atividade IV
+# Clínica Vida+
 
 Implementação do laboratório de estruturas de controle e coleções em C# com ASP.NET Core MVC e LINQ.
 
